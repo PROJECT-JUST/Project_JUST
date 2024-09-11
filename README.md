@@ -25,16 +25,25 @@
 
 //**멤버 구성(Members & RnR)**
 
-//최*재 (Inventory System)
-//김*훈 (Server Multiplaying)
-//김*경 (Enemy Side)
-//김*다 (Enemy Side)
-//김*신 (Player Side)
-//이*주 (Player Side)
-//전*서 (Player Side)
-//한*우 (Player Side)
-//조*혁 (Player Side)
-//전*건 (Player Side)
+//최_재 (Inventory System)
+
+//김_훈 (Server Multiplaying)
+
+//김_경 (Enemy Side)
+
+//김_다 (Enemy Side)
+
+//김_신 (Player Side)
+
+//이_주 (Player Side)
+
+//전_서 (Player Side)
+
+//한_우 (Player Side)
+
+//조_혁 (Player Side)
+
+//전_건 (Player Side)
 
 
 //**개발 환경(Development Environment)**
