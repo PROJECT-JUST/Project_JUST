@@ -2,7 +2,7 @@
  MTVS Side Unreal Project
 
 
-
+- 프로젝트 소개 : 루트슈터 장르 개발팀
 - Project Introduction : RootShooter Game Development
 
 
