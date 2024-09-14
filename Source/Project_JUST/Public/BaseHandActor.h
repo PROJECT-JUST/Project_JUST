@@ -7,7 +7,7 @@
 #include "GameFramework/Actor.h"
 #include "BaseHandActor.generated.h"
 
-UCLASS()
+UCLASS(ABSTRACT)
 class PROJECT_JUST_API ABaseHandActor : public AActor
 {
 	GENERATED_BODY()
@@ -43,12 +43,11 @@ public:
 
 
 	//=============================================//
-	//============== ?¥í????, ???? ===============//
+	//============== ?ï¿½ï¿½????, ???? ===============//
 	//=============================================//
 
 	//?????? ??? ENUM????
-	EItemType* itemType;
-
+	EItemType itemType;
 
 
 };

@@ -10,7 +10,7 @@
 #include "GameFramework/Character.h"
 #include "BaseCharacter.generated.h"
 
-UCLASS()
+UCLASS(ABSTRACT)
 class PROJECT_JUST_API ABaseCharacter : public ACharacter, public IBaseCharacterInterface
 {
 	GENERATED_BODY()
@@ -30,48 +30,48 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
-	//============== ÀÎÅÍÆäÀÌ½º ÇÔ¼ö ==============//
-	// ÇÇ°Ý
+	//============== ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ ï¿½Ô¼ï¿½ ==============//
+	// ï¿½Ç°ï¿½
 	virtual void GetDamage(FDamageResult damageInfo) PURE_VIRTUAL(ABaseCharacter::GetDamage, );
-	// »ç¸Á
+	// ï¿½ï¿½ï¿½
 	virtual void Death() PURE_VIRTUAL(ABaseCharacter::Death, );
 
-	//============== ºÎ¸ðÅ¬·¡½º ÇÔ¼ö ==============//
-	// ÀÌµ¿
+	//============== ï¿½Î¸ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ==============//
+	// ï¿½Ìµï¿½
 	virtual void Move() PURE_VIRTUAL(ABaseCharacter::Move, );
-	// °ø°Ý
+	// ï¿½ï¿½ï¿½ï¿½
 	virtual void Attack() PURE_VIRTUAL(ABaseCharacter::Attack, );
-	// ½ºÅ³
+	// ï¿½ï¿½Å³
 	virtual void UseSkill(UBaseSkillComponent* usedSkill) PURE_VIRTUAL(ABaseCharacter::UseSkill, );
 
 
 
 	//=============================================//
-	//============== ÀÎ½ºÅÏ½º, º¯¼ö ===============//
+	//============== ï¿½Î½ï¿½ï¿½Ï½ï¿½, ï¿½ï¿½ï¿½ï¿½ ===============//
 	//=============================================//
 
-	//Ä³¸¯ÅÍ Å¸ÀÔ ENUMº¯¼ö
+	//Ä³ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ENUMï¿½ï¿½ï¿½ï¿½
 	ECharType type;
 	
-	//ÇöÀç Ã¼·Â
+	//ï¿½ï¿½ï¿½ï¿½ Ã¼ï¿½ï¿½
 	float curHP;
 
-	//ÃÖ´ë Ã¼·Â
+	//ï¿½Ö´ï¿½ Ã¼ï¿½ï¿½
 	float maxHP;
 
-	//ÀÌµ¿ ¼Óµµ
+	//ï¿½Ìµï¿½ ï¿½Óµï¿½
 	float moveSpeed;
 
-	//Base Hand Actor ÀÎ½ºÅÏ½º
+	//Base Hand Actor ï¿½Î½ï¿½ï¿½Ï½ï¿½
 	ABaseHandActor* handActor;
 
-	//1¹ø Skill Comp ÀÎ½ºÅÏ½º
+	//1ï¿½ï¿½ Skill Comp ï¿½Î½ï¿½ï¿½Ï½ï¿½
 	UBaseSkillComponent* firstSkill;
 
-	//2¹ø Skill Comp ÀÎ½ºÅÏ½º
+	//2ï¿½ï¿½ Skill Comp ï¿½Î½ï¿½ï¿½Ï½ï¿½
 	UBaseSkillComponent* secondSkill;
 
-	//±Ã±Ø±â Skill Comp ÀÎ½ºÅÏ½º
+	//ï¿½Ã±Ø±ï¿½ Skill Comp ï¿½Î½ï¿½ï¿½Ï½ï¿½
 	UBaseSkillComponent* ultSkill;
 
 };

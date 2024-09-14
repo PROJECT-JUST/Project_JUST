@@ -10,42 +10,50 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(ABSTRACT)
 class PROJECT_JUST_API ABaseWeaponActor : public ABaseHandActor
 {
 	GENERATED_BODY()
 	
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Default|Values", BlueprintGetter=GetWeaponType, BlueprintSetter=SetWeaponType)
+	EWeaponType weaponType;
+
+	// JBS get set ì˜ˆì‹œ
+		public:
+	__declspec(property(get = GetWeaponType, put = SetWeaponType)) EWeaponType WEAPON_TYPE;
+	UFUNCTION(BlueprintGetter)
+	EWeaponType GetWeaponType()
+	{
+		return weaponType;
+	}
+	UFUNCTION(BlueprintSetter)
+	void SetWeaponType(EWeaponType value)
+	{
+		weaponType = value;
+	}
+		protected:
+
+	float weaponDamage;
 
 public:
-	
-	//=============================================//
-	//==============      ÇÔ¼ö      ===============//
-	//=============================================//
 
-	////»ç¿ëÇÔ¼ö(°ø°Ý, ¹æ¾î, ¾ÆÀÌÅÛ)
-	//virtual void Use() PURE_VIRTUAL(ABaseHandActor::Use, );
-
-	////ÀåÂøÇÔ¼ö
-	//virtual void AttachOwner() PURE_VIRTUAL(ABaseHandActor::AttachOwner, );
-
-	////ÀåÂøÇØÁ¦ ÇÔ¼ö
-	//virtual void DetachOwner() PURE_VIRTUAL(ABaseHandActor::DetachOwner, );
-
-	////µå¶øÇÔ¼ö
-	//virtual void Discard() PURE_VIRTUAL(ABaseHandActor::Discard, );
-
-	//°ø°ÝÇÔ¼ö
+protected:
 	virtual void Attack() PURE_VIRTUAL(ABaseWeaponActor::Attack(), );
 
-	//=============================================//
-	//============== ÀÎ½ºÅÏ½º, º¯¼ö ===============//
-	//=============================================//
 
-	//¹«±â Å¸ÀÔ ENUMº¯¼ö
-	EWeaponType* weaponType;
+public:
 
-	//¹«±â µ¥¹ÌÁö
-	float weaponDamage;
+
+
 
 
 };

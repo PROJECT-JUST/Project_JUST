@@ -23,3 +23,5 @@ Thumbs.db
 .vsconfig
 .vscode/
 .ignore
+.clang-format
+.clangd
