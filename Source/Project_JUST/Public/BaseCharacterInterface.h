@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include <BaseUtility.h>
 #include "BaseCharacterInterface.generated.h"
 
 
@@ -26,7 +27,8 @@ class PROJECT_JUST_API IBaseCharacterInterface
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	// ÇÇ°Ý
-	virtual void GetDamage(float damage, FVector hitPoint, FVector hitNormal = FVector::ZeroVector, FName boneName = "", FVector attackerLocation = FVector::ZeroVector) = 0;
+	// virtual void GetDamage(float damage, FVector hitPoint, FVector hitNormal = FVector::ZeroVector, FName boneName = "", FVector attackerLocation = FVector::ZeroVector) = 0;
+	virtual void GetDamage(FDamageResult damageInfo) = 0;
 	// »ç¸Á
 	virtual void Death() = 0;
 };

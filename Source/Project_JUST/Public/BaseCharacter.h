@@ -32,7 +32,7 @@ public:
 	
 	//============== 인터페이스 함수 ==============//
 	// 피격
-	virtual void GetDamage(float damage, FVector hitPoint, FVector hitNormal = FVector::ZeroVector, FName boneName = "", FVector attackerLocation = FVector::ZeroVector) PURE_VIRTUAL(ABaseCharacter::GetDamage, );
+	virtual void GetDamage(FDamageResult damageInfo) PURE_VIRTUAL(ABaseCharacter::GetDamage, );
 	// 사망
 	virtual void Death() PURE_VIRTUAL(ABaseCharacter::Death, );
 

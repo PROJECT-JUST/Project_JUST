@@ -49,6 +49,33 @@ enum class ESkillType : uint8
 
 
 ////GetDamage 인자 구조체
+USTRUCT(BlueprintType)
+struct FDamageResult
+{
+	GENERATED_BODY()
+	
+	float damage; 
+	FVector hitPoint = FVector::ZeroVector; 
+	FVector hitNormal = FVector::ZeroVector; 
+	FName boneName = TEXT(""); 
+	FVector attackerLocation = FVector::ZeroVector;
+
+	// XXX JBS 필요한 경우 만큼 생성자 설정해서 사용
+	// 생성자
+	FDamageResult() {}
+	
+	FDamageResult(float damage) : damage(damage) {}
+
+	FDamageResult(float damage
+				,FVector hitPoint 
+				,FVector hitNormal 
+				,FName boneName 
+				,FVector attackerLocation) :
+				 damage(damage)
+				, hitPoint(hitPoint)
+				, hitNormal(hitNormal) {}
+};
+
 //USTRUCT(BlueprintType)
 //struct GDVariable
 //{
@@ -74,6 +101,6 @@ class PROJECT_JUST_API UBaseUtility : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 	
 public: 
-
+	void Doremi();
 
 };
