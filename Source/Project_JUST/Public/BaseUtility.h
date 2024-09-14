@@ -6,8 +6,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "BaseUtility.generated.h"
 
-
-//е╛╥║╫╨е╦ют ENUM е╛╥║╫╨
+//е╛О©╫О©╫О©╫О©╫е╦О©╫О©╫ ENUM е╛О©╫О©╫О©╫О©╫
 UENUM(BlueprintType)
 enum class ECharType : uint8
 {
@@ -16,7 +15,7 @@ enum class ECharType : uint8
 
 };
 
-//╬фюлеше╦ют ENUM е╛╥║╫╨
+//О©╫О©╫О©╫О©╫О©╫О©╫е╦О©╫О©╫ ENUM е╛О©╫О©╫О©╫О©╫
 UENUM(BlueprintType)
 enum class EItemType : uint8
 {
@@ -26,7 +25,7 @@ enum class EItemType : uint8
 
 };
 
-//╧╚╠Бе╦ют ENUM е╛╥║╫╨
+//О©╫О©╫О©╫О©╫е╦О©╫О©╫ ENUM е╛О©╫О©╫О©╫О©╫
 UENUM(BlueprintType)
 enum class EWeaponType : uint8
 {
@@ -36,7 +35,7 @@ enum class EWeaponType : uint8
 
 };
 
-//╫╨еЁе╦ют ENUM е╛╥║╫╨
+//О©╫О©╫еЁе╦О©╫О©╫ ENUM е╛О©╫О©╫О©╫О©╫
 UENUM(BlueprintType)
 enum class ESkillType : uint8
 {
@@ -48,32 +47,42 @@ enum class ESkillType : uint8
 
 
 
-////GetDamage юнюз ╠╦а╤ц╪
-//USTRUCT(BlueprintType)
-//struct GDVariable
-//{
-//    GENERATED_BODY()
-//    
-//public:
-//
-//    float damage; 
-//    FVector hitPoint; 
-//    FVector hitNormal = FVector::ZeroVector; 
-//    FName boneName = ""; 
-//    FVector attackerLocation = FVector::ZeroVector;
-//
-//};
+// К▄─К╞╦Л╖─ Л═∙КЁ╢ Й╣╛Л║╟Л╡╢
+USTRUCT(BlueprintType)
+struct FDamageResult
+{
+	GENERATED_BODY()
+	
+	float damage; 
+	FVector hitPoint = FVector::ZeroVector; 
+	FVector hitNormal = FVector::ZeroVector; 
+	FName boneName = TEXT(""); 
+	FVector attackerLocation = FVector::ZeroVector;
+
+	// XXX JBS М∙└Л ■М∙° Й╡╫Л ╟ К╖▄М│╪ Л┐²Л└╠Л·░ Л└╓Л═∙М∙╢Л└° Л┌╛Л ╘
+	// Л┐²Л└╠Л·░
+	FDamageResult() {}
+	
+	FDamageResult(float damage) : damage(damage) {}
+
+	FDamageResult(float damage
+				,FVector hitPoint 
+				,FVector hitNormal 
+				,FName boneName 
+				,FVector attackerLocation) :
+				 damage(damage)
+				, hitPoint(hitPoint)
+				, hitNormal(hitNormal) {}
+};
 
 
-/**
- * 
- */
 UCLASS()
 class PROJECT_JUST_API UBaseUtility : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 	
-public: 
+public:
+	
 
 
 };
