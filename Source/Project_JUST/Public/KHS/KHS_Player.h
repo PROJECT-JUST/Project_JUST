@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -14,18 +14,18 @@ class PROJECT_JUST_API AKHS_Player : public ABaseCharacter
 {
 	GENERATED_BODY()
 	
-	////============= = ÀÎÅÍÆäÀÌ½º ÇÔ¼ö ==============//
-	//// ÇÇ°İ
+	////============= = ì¸í„°í˜ì´ìŠ¤ í•¨ìˆ˜ ==============//
+	//// í”¼ê²©
 	//virtual void GetDamage(float damage, FVector hitPoint, FVector hitNormal = FVector::ZeroVector, FName boneName = "", FVector attackerLocation = FVector::ZeroVector) PURE_VIRTUAL(ABaseCharacter::GetDamage, );
-	//// »ç¸Á
+	//// ì‚¬ë§
 	//virtual void Death() PURE_VIRTUAL(ABaseCharacter::Death, );
 
-	////============== ºÎ¸ğÅ¬·¡½º ÇÔ¼ö ==============//
-	//// ÀÌµ¿
+	////============== ë¶€ëª¨í´ë˜ìŠ¤ í•¨ìˆ˜ ==============//
+	//// ì´ë™
 	//virtual void Move() PURE_VIRTUAL(ABaseCharacter::Move, );
-	//// °ø°İ
+	//// ê³µê²©
 	//virtual void Attack() PURE_VIRTUAL(ABaseCharacter::Attack, );
-	//// ½ºÅ³
+	//// ìŠ¤í‚¬
 	//virtual void UseSkill(UBaseSkillComponent* usedSkill) PURE_VIRTUAL(ABaseCharacter::UseSkill, );
 
 

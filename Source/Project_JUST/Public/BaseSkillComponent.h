@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -26,19 +26,19 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 
-	//½ºÅ³ »ç¿ë ÇÔ¼ö
+	//ìŠ¤í‚¬ ì‚¬ìš© í•¨ìˆ˜
 	virtual void Use() PURE_VIRTUAL(UBaseSkillComponent::Use, );
 
-	//½ºÅ³ Å¸ÀÔ ENUM º¯¼ö
+	//ìŠ¤í‚¬ íƒ€ì… ENUM ë³€ìˆ˜
 	ESkillType* skillType;
 
-	//½ºÅ³ ÄğÅ¸ÀÓ º¯¼ö
+	//ìŠ¤í‚¬ ì¿¨íƒ€ì„ ë³€ìˆ˜
 	float coolTIme;
 
-	//½ºÅ³ »ç¿ë°¡´ÉÇÃ·¡±×
+	//ìŠ¤í‚¬ ì‚¬ìš©ê°€ëŠ¥í”Œë˜ê·¸
 	bool canUseSkill;
 
-	//½ºÅ³ µ¥¹ÌÁö
+	//ìŠ¤í‚¬ ë°ë¯¸ì§€
 	float skillDamage;
 
 		

@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -28,13 +28,14 @@ protected:
 	EWeaponType weaponType;
 
 	// JBS get set 예시
-		public:
+public:
 	__declspec(property(get = GetWeaponType, put = SetWeaponType)) EWeaponType WEAPON_TYPE;
 	UFUNCTION(BlueprintGetter)
 	EWeaponType GetWeaponType()
 	{
 		return weaponType;
 	}
+
 	UFUNCTION(BlueprintSetter)
 	void SetWeaponType(EWeaponType value)
 	{

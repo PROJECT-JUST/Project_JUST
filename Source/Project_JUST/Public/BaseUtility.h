@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -6,7 +6,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "BaseUtility.generated.h"
 
-//Ŭ����Ÿ�� ENUM Ŭ����
+//캐릭터타입 Enum
 UENUM(BlueprintType)
 enum class ECharType : uint8
 {
@@ -15,7 +15,7 @@ enum class ECharType : uint8
 
 };
 
-//������Ÿ�� ENUM Ŭ����
+//아이템타입 Enum
 UENUM(BlueprintType)
 enum class EItemType : uint8
 {
@@ -25,7 +25,7 @@ enum class EItemType : uint8
 
 };
 
-//����Ÿ�� ENUM Ŭ����
+//무기타입 Enum
 UENUM(BlueprintType)
 enum class EWeaponType : uint8
 {
@@ -35,7 +35,7 @@ enum class EWeaponType : uint8
 
 };
 
-//��ųŸ�� ENUM Ŭ����
+//스킬타입 Enum
 UENUM(BlueprintType)
 enum class ESkillType : uint8
 {

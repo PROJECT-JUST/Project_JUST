@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+Ôªø// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -26,9 +26,9 @@ class PROJECT_JUST_API IBaseCharacterInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	// ««∞›
+	// ÌîºÍ≤©
 	// virtual void GetDamage(float damage, FVector hitPoint, FVector hitNormal = FVector::ZeroVector, FName boneName = "", FVector attackerLocation = FVector::ZeroVector) = 0;
 	virtual void GetDamage(FDamageResult damageInfo) = 0;
-	// ªÁ∏¡
+	// ÏÇ¨Îßù
 	virtual void Death() = 0;
 };
