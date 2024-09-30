@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -30,48 +30,48 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
-	//============== �������̽� �Լ� ==============//
-	// �ǰ�
+	//==============        ̽   Լ  ==============//
+	//  ǰ 
 	virtual void GetDamage(FDamageResult damageInfo) PURE_VIRTUAL(ABaseCharacter::GetDamage, );
-	// ���
+	//    
 	virtual void Death() PURE_VIRTUAL(ABaseCharacter::Death, );
 
-	//============== �θ�Ŭ���� �Լ� ==============//
-	// �̵�
+	//==============  θ Ŭ      Լ  ==============//
+	//  ̵ 
 	virtual void Move() PURE_VIRTUAL(ABaseCharacter::Move, );
-	// ����
+	//     
 	virtual void Attack() PURE_VIRTUAL(ABaseCharacter::Attack, );
-	// ��ų
+	//   ų
 	virtual void UseSkill(UBaseSkillComponent* usedSkill) PURE_VIRTUAL(ABaseCharacter::UseSkill, );
 
 
 
 	//=============================================//
-	//============== �ν��Ͻ�, ���� ===============//
+	//==============  ν  Ͻ ,      ===============//
 	//=============================================//
 
-	//ĳ���� Ÿ�� ENUM����
+	//ĳ     Ÿ   ENUM    
 	ECharType type;
 	
-	//���� ü��
+	//     ü  
 	float curHP;
 
-	//�ִ� ü��
+	// ִ  ü  
 	float maxHP;
 
-	//�̵� �ӵ�
+	// ̵   ӵ 
 	float moveSpeed;
 
-	//Base Hand Actor �ν��Ͻ�
+	//Base Hand Actor  ν  Ͻ 
 	ABaseHandActor* handActor;
 
-	//1�� Skill Comp �ν��Ͻ�
+	//1   Skill Comp  ν  Ͻ 
 	UBaseSkillComponent* firstSkill;
 
-	//2�� Skill Comp �ν��Ͻ�
+	//2   Skill Comp  ν  Ͻ 
 	UBaseSkillComponent* secondSkill;
 
-	//�ñر� Skill Comp �ν��Ͻ�
+	// ñر  Skill Comp  ν  Ͻ 
 	UBaseSkillComponent* ultSkill;
 
 };

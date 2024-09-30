@@ -3,3 +3,16 @@
 
 #include "BaseWeaponActor.h"
 
+void ABaseWeaponActor::BeginPlay()
+{
+    Super::BeginPlay();
+
+
+}
+
+void ABaseWeaponActor::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    
+}
