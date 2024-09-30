@@ -26,3 +26,6 @@ Thumbs.db
 .clang-format
 .clangd
 /.idea
+*.code-workspace
+.clangd
+.clang-format
